@@ -1,0 +1,183 @@
+local mapid,gid = ...
+gid = tonumber(gid)
+mapid = tonumber(mapid)
+--建设城市npc
+local ActivityConfig = require "config.activityConfig"
+local OpenLevelConfig = require "config.openLevel"
+local cityCfgByMonsterNpc = ActivityConfig.GetCityConfig(nil,nil,nil,gid)
+local buildCityOpenLv = 4008
+if OpenLevelConfig.GetStatus(buildCityOpenLv) then
+	local cityCfgByNpc = ActivityConfig.GetCityConfig(nil,nil,gid)
+	if cityCfgByNpc then
+		DialogStack.Push("buildCity/buildCityFrame",{map_Id = cityCfgByNpc.map_id})
+	end
+end
+
+local menus = {}
+local function SetFightBtnShow(info)
+	local lastLv = ActivityConfig.GetCityLvAndExp(info,cityCfgByMonsterNpc.type)
+	if lastLv then
+		local cityLvCfg = ActivityConfig.GetBuildCityConfig(cityCfgByMonsterNpc.type,lastLv)
+		local  fight_id = cityLvCfg.fight_id
+		if fight_id then
+			local SmallTeamDungeonConf = require "config.SmallTeamDungeonConf"
+			local conf = SmallTeamDungeonConf.GetTeam_pve_fight_gid(fight_id)
+
+			if conf and module.playerModule.Get().level >= conf.depend_level_id then				
+				table.insert(menus, {name = "挑战",icon = "bg_db_zhandourenwu",auto = false, action = function()
+					module.QuestModule.CityContructFightBoss(cityCfgByMonsterNpc.type)
+					utils.SGKTools.CloseFrame()
+				end}) 
+		
+				SetStoryOptions(menus)
+				LoadStoryOptions()
+			end
+		end
+	end
+end
+
+
+--建设城市Boss
+if cityCfgByMonsterNpc then
+	local info = module.QuestModule.CityContuctInfo(nil,true)
+	if info and info.boss and next(info.boss)~=nil then
+		SetFightBtnShow(info)
+	else
+		coroutine.resume(coroutine.create(function()
+			local data = utils.NetworkService.SyncRequest(11049)
+			local _cityContuctInfo = {boss = {}};
+			_cityContuctInfo.round_index  = data[3];
+			_cityContuctInfo.today_count  = data[4];
+			_cityContuctInfo.current_city = data[6];
+
+			for _, v in ipairs(data[5] or {}) do
+				_cityContuctInfo.boss[v[1]] = { id = v[1], exp = v[2], quest_group = v[3] }
+			end
+			SetFightBtnShow(_cityContuctInfo)
+		end))
+	end
+end
+--[==[
+local cityQuestTab = {41,42,43,44}
+local _cfg =  ActivityConfig.GetCityConfig(tonumber(mapid))
+if _cfg and _cfg.donate_npc_id == gid or gid == 2010014 then
+    local menus = {}
+	--常规任务
+    local activity_id = SGKTools.GetActivityIDByQuest(v.id)
+
+    local cityQuest = nil
+	for k,_ in pairs(cityQuestTab) do--类型 41 到 44的任务为建设任务	
+		local allQuests = QuestModule.GetList(k,0);
+		for _,v in ipairs(allQuests) do
+			cityQuest = v
+			break
+		end
+		if cityQuest then
+			break
+		end
+	end
+	if cityQuest then
+		local result,result_type = QuestModule.CanSubmit(cityQuest.id)
+		local icon_resouce = "bg_db_duihuarenwu"
+
+	end
+		
+
+    result[k],result_type[k] = QuestModule.CanSubmit(v.id)
+
+    
+    if result_type[k] == 2 or v.id == 102143 then
+        icon_resouce = "bg_db_zhandourenwu"
+    end
+    if v.type == 60  and result_type[k] ~= 2 and QuestModule.CanSubmit(v.id) ~= true then
+        icon_resouce = "bg_db_weidacheng"
+    end
+    local button_desc = v.button_des
+    if activity_id and activity_id > 0 then
+        button_desc = button_desc .. "\n(推荐组队)"
+        table.insert(menus, {name="前往组队", icon = "bg_db_gongneng", action = function()
+            --打开队伍列表
+            SGKTools.CloseStory()
+            SGKTools.OpenActivityTeamList(activity_id)
+            --开启匹配
+            --SGKTools.StartActivityMatching(activity_id)
+        end})
+    end
+
+    local aa = {name = button_desc, icon = icon_resouce, action = function()
+        if v.id == 102143 then
+            DispatchEvent("KEYDOWN_ESCAPE")
+            if module.fightModule.GetFightInfo(10010100):IsPassed() then
+                QuestModule.Submit(v.id)
+            else
+                MapHelper.ClearGuideCache(9998)
+                MapHelper.PlayGuide(8202, 0.2)
+            end
+       --[[  elseif v.id == 102161 then
+             --打开逆血魔装穿戴界面
+            DispatchEvent("KEYDOWN_ESCAPE")
+            --ERROR_LOG(SGKTools.ChecHeroFashionSuit(11000, 11000) )
+            if SGKTools.ChecHeroFashionSuit(11000, 11000) then
+                QuestModule.Submit(v.id)
+            else
+                Sleep(0.1)
+                --DialogStack.Push("mapSceneUI/guideLayer/guideCommon", v.id)
+                MapHelper.ClearGuideCache(9997)
+                MapHelper.PlayGuide(8601, 0.2)
+            end  ]]
+        elseif v.id == 103012 then
+            local _quest = QuestModule.Get(103012)
+            if _quest and _quest.status == 0 then
+                if not cityQuest then
+                    AcceptQuest(nil,44)
+                end
+            end
+        else
+            if result[k] then
+                BeforeSubmitItem(v)
+            elseif result_type[k] == 2  or result_type[k] == 7 and (v.event_type1 == 88 or v.event_type2 == 88) then
+                --任务战斗
+                BeforeFight(v)
+            else
+                QuestModule.CanSubmit(v.id)
+                -----没有任务物品
+                local story_id = tonumber(v.id.."91")
+                if StoryConfig.GetStoryConf(story_id) then
+                    LoadStory(story_id,function()
+                        --CloseFrame()
+                        BeforeSubmitItem(v)
+                    end)
+                else
+                    --CloseFrame()
+                    BeforeSubmitItem(v)
+                end
+            end
+        end
+
+    end}
+
+    local cur_quest = SGKTools.GetTaskId()
+    if v.id == cur_quest and v.guide_id == 0 then
+        aa.effect = "effect/UI/fx_guide_kuan"
+        --0：不自动    1：自动交   2：自动引导  3：都自动
+        if v.is_auto and (v.is_auto == 1 or v.is_auto == 3) then
+            aa.auto = true
+        end
+    end
+
+    if v.guide_id ~= 0 then
+        aa.guideName = "options"..v.guide_id
+    end
+    if v.id ~= 100042 then
+        if v.is_auto == 4 then
+            aa.action()
+        else
+            table.insert(menus, aa)
+        end
+    end
+    SetStoryOptions(menus)
+
+else
+    ERROR_LOG("xxxxxxxxxxxxx=========",mapid,gid)
+end
+--]==]

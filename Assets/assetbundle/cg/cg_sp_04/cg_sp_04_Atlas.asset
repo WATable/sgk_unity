@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: cg_sp_04_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 5aadd0b76580d08468b2510d2476e5e9, type: 3}
+  materials:
+  - {fileID: 2100000, guid: d23c2a312bc0e05458a3f62e1399a986, type: 2}
+  atlas:
+    pages:
+    - name: cg_sp_04.png
+      format: 6
+      minFilter: 1
+      magFilter: 1
+      uWrap: 1
+      vWrap: 1
+      rendererObject: {fileID: 2100000, guid: d23c2a312bc0e05458a3f62e1399a986, type: 2}
+      width: 2048
+      height: 1024
+    regions:
+    - pageIndex: 0
+      name: 0261
+      x: 2
+      y: 206
+      width: 750
+      height: 357
+      u: 0.0009765625
+      v: 0.7988281
+      u2: 0.3671875
+      v2: 0.4501953
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 750
+      originalHeight: 357
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 0262
+      x: 2
+      y: 565
+      width: 750
+      height: 415
+      u: 0.0009765625
+      v: 0.4482422
+      u2: 0.3671875
+      v2: 0.04296875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 750
+      originalHeight: 415
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 0263
+      x: 754
+      y: 707
+      width: 750
+      height: 273
+      u: 0.36816406
+      v: 0.3095703
+      u2: 0.734375
+      v2: 0.04296875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 750
+      originalHeight: 273
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: bg
+      x: 2
+      y: 12
+      width: 192
+      height: 334
+      u: 0.0009765625
+      v: 0.98828125
+      u2: 0.1640625
+      v2: 0.80078125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 192
+      originalHeight: 334
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: bz1
+      x: 1343
+      y: 224
+      width: 419
+      height: 404
+      u: 0.6557617
+      v: 0.78125
+      u2: 0.86035156
+      v2: 0.38671875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 419
+      originalHeight: 404
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: bz12
+      x: 338
+      y: 2
+      width: 210
+      height: 202
+      u: 0.16503906
+      v: 0.9980469
+      u2: 0.26757812
+      v2: 0.80078125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 210
+      originalHeight: 202
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: bz2
+      x: 754
+      y: 273
+      width: 587
+      height: 432
+      u: 0.36816406
+      v: 0.73339844
+      u2: 0.65478516
+      v2: 0.31152344
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 587
+      originalHeight: 432
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: bz2l
+      x: 1764
+      y: 344
+      width: 284
+      height: 214
+      u: 0.8613281
+      v: 0.6640625
+      u2: 0.9658203
+      v2: 0.38671875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 294
+      originalHeight: 216
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: bzbg
+      x: 1506
+      y: 630
+      width: 350
+      height: 496
+      u: 0.73535156
+      v: 0.38476562
+      u2: 0.97753906
+      v2: 0.04296875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 350
+      originalHeight: 496
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: x1
+      x: 1343
+      y: 630
+      width: 75
+      height: 77
+      u: 0.6557617
+      v: 0.38476562
+      u2: 0.6933594
+      v2: 0.31152344
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 75
+      originalHeight: 77
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    Loaded: 1

@@ -1,0 +1,443 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: cg_new1_2_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: ce0de3a8293eb7b45958ff903bfb45a8, type: 3}
+  materials:
+  - {fileID: 2100000, guid: eefbfaafbdb1bb140936e1c4ca4e2799, type: 2}
+  atlas:
+    pages:
+    - name: cg_new1_2.png
+      format: 6
+      minFilter: 1
+      magFilter: 1
+      uWrap: 1
+      vWrap: 1
+      rendererObject: {fileID: 2100000, guid: eefbfaafbdb1bb140936e1c4ca4e2799, type: 2}
+      width: 2048
+      height: 2048
+    regions:
+    - pageIndex: 0
+      name: 1_1
+      x: 660
+      y: 1407
+      width: 768
+      height: 283
+      u: 0.32226562
+      v: 0.31298828
+      u2: 0.6972656
+      v2: 0.17480469
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 770
+      originalHeight: 285
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 1_bg
+      x: 1275
+      y: 601
+      width: 413
+      height: 277
+      u: 0.6225586
+      v: 0.70654297
+      u2: 0.7578125
+      v2: 0.5048828
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 415
+      originalHeight: 279
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 1_lh
+      x: 1554
+      y: 879
+      width: 135
+      height: 90
+      u: 0.75878906
+      v: 0.5708008
+      u2: 0.8027344
+      v2: 0.5048828
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 137
+      originalHeight: 92
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 1_tf
+      x: 1257
+      y: 30
+      width: 102
+      height: 243
+      u: 0.61376953
+      v: 0.98535156
+      u2: 0.6635742
+      v2: 0.8666992
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 104
+      originalHeight: 245
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 1_wg
+      x: 1816
+      y: 1522
+      width: 87
+      height: 72
+      u: 0.88671875
+      v: 0.25683594
+      u2: 0.9291992
+      v2: 0.22167969
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 89
+      originalHeight: 74
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 1_ye
+      x: 1646
+      y: 886
+      width: 480
+      height: 178
+      u: 0.80371094
+      v: 0.5673828
+      u2: 0.890625
+      v2: 0.3330078
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 482
+      originalHeight: 180
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_bj
+      x: 1259
+      y: 1016
+      width: 385
+      height: 350
+      u: 0.6147461
+      v: 0.50390625
+      u2: 0.8027344
+      v2: 0.3330078
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 385
+      originalHeight: 350
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_dian
+      x: 569
+      y: 9
+      width: 379
+      height: 310
+      u: 0.27783203
+      v: 0.99560547
+      u2: 0.46289062
+      v2: 0.8442383
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 379
+      originalHeight: 310
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_guang
+      x: 1023
+      y: 275
+      width: 330
+      height: 302
+      u: 0.49951172
+      v: 0.86572266
+      u2: 0.66064453
+      v2: 0.7182617
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 330
+      originalHeight: 302
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_r1
+      x: 2
+      y: 1221
+      width: 656
+      height: 814
+      u: 0.0009765625
+      v: 0.4038086
+      u2: 0.32128906
+      v2: 0.0063476562
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 658
+      originalHeight: 816
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_r2
+      x: 2
+      y: 68
+      width: 460
+      height: 565
+      u: 0.0009765625
+      v: 0.9667969
+      u2: 0.27685547
+      v2: 0.7421875
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 462
+      originalHeight: 567
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_r3
+      x: 973
+      y: 579
+      width: 300
+      height: 417
+      u: 0.47509766
+      v: 0.71728516
+      u2: 0.62158203
+      v2: 0.5136719
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 302
+      originalHeight: 419
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_s1
+      x: 615
+      y: 321
+      width: 249
+      height: 406
+      u: 0.30029297
+      v: 0.8432617
+      u2: 0.49853516
+      v2: 0.7216797
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 251
+      originalHeight: 408
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_s2
+      x: 950
+      y: 2
+      width: 271
+      height: 305
+      u: 0.4638672
+      v: 0.99902344
+      u2: 0.61279297
+      v2: 0.8666992
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 273
+      originalHeight: 307
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_tf1
+      x: 1816
+      y: 1596
+      width: 228
+      height: 439
+      u: 0.88671875
+      v: 0.22070312
+      u2: 0.9980469
+      v2: 0.0063476562
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 230
+      originalHeight: 441
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2_tf2
+      x: 2
+      y: 530
+      width: 689
+      height: 567
+      u: 0.0009765625
+      v: 0.74121094
+      u2: 0.27783203
+      v2: 0.40478516
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 691
+      originalHeight: 569
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 3_bj
+      x: 660
+      y: 1692
+      width: 768
+      height: 343
+      u: 0.32226562
+      v: 0.17382812
+      u2: 0.6972656
+      v2: 0.0063476562
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 770
+      originalHeight: 345
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 3_r1
+      x: 660
+      y: 998
+      width: 597
+      height: 407
+      u: 0.32226562
+      v: 0.5126953
+      u2: 0.61376953
+      v2: 0.31396484
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 599
+      originalHeight: 409
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 3_r2
+      x: 615
+      y: 572
+      width: 356
+      height: 424
+      u: 0.30029297
+      v: 0.7207031
+      u2: 0.4741211
+      v2: 0.5136719
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 358
+      originalHeight: 426
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 3_w1
+      x: 615
+      y: 1195
+      width: 25
+      height: 24
+      u: 0.30029297
+      v: 0.4165039
+      u2: 0.3125
+      v2: 0.40478516
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 27
+      originalHeight: 26
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 3_w2
+      x: 1355
+      y: 280
+      width: 319
+      height: 206
+      u: 0.6616211
+      v: 0.86328125
+      u2: 0.76220703
+      v2: 0.70751953
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 321
+      originalHeight: 208
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: bg
+      x: 1430
+      y: 1368
+      width: 384
+      height: 667
+      u: 0.6982422
+      v: 0.33203125
+      u2: 0.8857422
+      v2: 0.0063476562
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 384
+      originalHeight: 667
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: hengge1
+      x: 571
+      y: 449
+      width: 770
+      height: 42
+      u: 0.2788086
+      v: 0.7807617
+      u2: 0.2993164
+      v2: 0.40478516
+      offsetX: 0
+      offsetY: 1
+      originalWidth: 770
+      originalHeight: 44
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    Loaded: 1

@@ -1,0 +1,94 @@
+----------------保卫基地npc----------------------
+local mapid,gid,uuid = ...
+gid = tonumber(gid)
+
+
+if gid == 9067201 then
+	if utils.SGKTools.isTeamLeader() then
+		--showDlgError(nil,"您是队长，可以进行操作!")	
+		if module.TeamActivityModule.Get(2) == nil then
+			LoadStory(1905101,function ()            
+		        end,true)
+			local menus = {}
+			table.insert(menus, {name="离开副本",icon = "bg_db_gongneng", auto = false, action = function()
+			    SceneStack.EnterMap(10);
+				-- module.TeamActivityModule.Interact(2, 1, 3);
+				DispatchEvent("KEYDOWN_ESCAPE")          --关闭对话界面
+		    end})
+			table.insert(menus, {name="开启活动",icon = "bg_db_zhandourenwu", auto = false, action = function()
+				module.TeamActivityModule.Start(2);
+				showDlgError(nil,"活动开启成功!")	
+				DispatchEvent("KEYDOWN_ESCAPE")          --关闭对话界面		
+		    end})
+			SetStoryOptions(menus)
+			LoadStoryOptions()
+		else
+		    LoadStory(1905102,function ()            
+		        end,true)
+			local menus = {}
+			table.insert(menus, {name="放弃活动",icon = "bg_db_gongneng", auto = false, action = function()
+			    SceneStack.EnterMap(10);
+				module.TeamActivityModule.Interact(2, 1, 3);
+				DispatchEvent("KEYDOWN_ESCAPE")
+		    end})
+			SetStoryOptions(menus)
+			LoadStoryOptions()
+		end
+    elseif utils.SGKTools.GetTeamState() then
+	    showDlgError(nil,"您不是队长，无法进行操作!")	
+	else
+		LoadStory(1905102,function ()            
+		        end,true)	
+		local menus = {}
+		table.insert(menus, {name="离开地图",icon = "bg_db_gongneng", auto = false, action = function()
+			SceneStack.EnterMap(10);
+			DispatchEvent("KEYDOWN_ESCAPE")          --关闭对话界面
+		end})
+		SetStoryOptions(menus)
+		LoadStoryOptions()
+	end
+end
+
+--[[if gid == 9067201 then
+	if utils.SGKTools.isTeamLeader() then
+		--showDlgError(nil,"您是队长，可以进行操作!")	
+		if module.TeamActivityModule.Get(2) == nil then
+			LoadStory(1905101,function ()            
+		        end,true)
+			local menus = {}
+			table.insert(menus, {name="放弃活动",icon = "bg_db_gongneng", auto = false, action = function()
+			    SceneStack.EnterMap(10);
+				DispatchEvent("KEYDOWN_ESCAPE")          --关闭对话界面
+		    end})
+			table.insert(menus, {name="开启活动",icon = "bg_db_zhandourenwu", auto = false, action = function()
+				module.TeamActivityModule.Start(2);
+				DispatchEvent("KEYDOWN_ESCAPE")          --关闭对话界面
+				--showDlgError(nil,"活动已开启!")	
+		    end})
+			SetStoryOptions(menus)
+			LoadStoryOptions()
+		else
+		    LoadStory(1905102,function ()            
+		        end,true)
+			local menus = {}
+			table.insert(menus, {name="放弃活动",icon = "bg_db_gongneng", auto = false, action = function()
+			    SceneStack.EnterMap(10);
+            	module.TeamActivityModule.Interact(2, 1, 3);
+				DispatchEvent("KEYDOWN_ESCAPE")
+		    end})
+			SetStoryOptions(menus)
+			LoadStoryOptions()
+		end
+    elseif utils.SGKTools.GetTeamState() then
+	    showDlgError(nil,"您不是队长，无法进行操作!")	
+	else
+		LoadStory(1905101,function ()            
+			end,true)
+		local menus = {}
+		table.insert(menus, {name="离开地图",icon = "bg_db_gongneng", auto = false, action = function()
+			SceneStack.EnterMap(10);
+			DispatchEvent("KEYDOWN_ESCAPE")          --关闭对话界面
+		end})
+		SetStoryOptions(menus)
+	end
+end]]

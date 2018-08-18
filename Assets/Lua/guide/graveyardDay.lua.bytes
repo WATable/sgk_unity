@@ -1,0 +1,80 @@
+local mapid,gid = ...
+gid = tostring(gid)
+local ActivityConfig = require "config.activityConfig"
+local menus = {}
+
+local npcTable = ActivityConfig.GetActivityNpcList()
+-- local fubenTable = {
+-- 	[2010006] = {101,"日常副本","进入副本"},
+-- 	[6010981] = {101,"日常副本","进入副本"},
+-- 	[2010008] = {102,"日常副本","进入副本"},
+-- 	[6010982] = {102,"日常副本","进入副本"},
+-- 	[2019001] = {103,"日常副本","进入副本"},
+-- 	[6019981] = {103,"日常副本","进入副本"},
+-- 	[2030011] = {104,"日常副本","进入副本"},
+-- 	[6030981] = {104,"日常副本","进入副本"},
+-- 	[2030010] = {105,"日常副本","进入副本"},
+-- 	[6030982] = {105,"日常副本","进入副本"},
+-- 	[2030003] = {106,"日常副本","进入副本"},
+-- 	-- [6030982] = {106,"日常副本","进入副本"},
+-- 	[2019004] = {107,"日常副本","进入副本"},
+-- 	-- [6030982] = {107,"日常副本","进入副本"},
+-- 	[2037002] = {108,"日常副本","进入副本"},
+-- 	-- [6030982] = {108,"日常副本","进入副本"},
+-- 	[2027000] = {109,"日常副本","进入副本"},
+-- 	-- [6030982] = {109,"日常副本","进入副本"},
+-- 	[2050000] = {110,"日常副本","进入副本"},
+-- 	-- [6030982] = {110,"日常副本","进入副本"},
+-- 	[2027004] = {111,"日常副本","进入副本"},
+-- 	-- [6030982] = {111,"日常副本","进入副本"},
+-- 	[2037003] = {112,"日常副本","进入副本"},
+-- 	-- [6030982] = {112,"日常副本","进入副本"},
+-- 	[2030006] = {113,"日常副本","进入副本"},
+-- 	-- [6030982] = {113,"日常副本","进入副本"},
+-- 	[2019002] = {114,"日常副本","进入副本"},
+-- 	-- [6030982] = {114,"日常副本","进入副本"},
+-- 	[2049000] = {115,"日常副本","进入副本"},
+-- 	-- [6030982] = {115,"日常副本","进入副本"},
+-- 	[2037000] = {116,"日常副本","进入副本"},
+-- 	-- [6030982] = {116,"日常副本","进入副本"},
+-- 	[2010011] = {55,"保卫基地","进入副本"},
+-- 	[2037001] = {2001,"棱镜探险","进入副本"},
+--     [2010004] = {201,"一周副本","进入副本"},
+-- 	[2010007] = {202,"一周副本","进入副本"},
+-- 	[2030009] = {203,"一周副本","进入副本"},
+-- 	[2013001] = {3,"元素暴走","开始活动"},
+--     [2037004] = {51,"日常试炼","开始任务"},
+--     [2038000] = {52,"日常试炼","开始任务"},
+--     -- [2027000] = {53,"日常试炼","开始任务"},
+--     [2013000] = {54,"日常试炼","开始任务"},
+-- }
+
+-- local MapHelper = require "utils.MapHelper"
+-- local activity_list = MapHelper.GetConfigTable("all_activity","id")
+
+if not npcTable[gid] then
+	return
+end
+
+local activity_id = npcTable[gid].id
+local activity_name = npcTable[gid].name
+local activity_level = npcTable[gid].lv
+local my_level = module.playerModule.Get().level
+
+if my_level >= activity_level then
+	LoadStory(999993,function () 
+	end,true) 
+	table.insert(menus, {name = activity_name,icon = "bg_db_zhandourenwu", guideName = "options"..activity_id, action = function()
+		local CemeteryConf = require "config.cemeteryConfig"
+		if CemeteryConf.Getteam_battle_activity(activity_id) then
+			DispatchEvent("CloseStoryReset")
+			DialogStack.Replace("TeamPveEntrance",{gid = activity_id,is_on = true},"UGUIRootTop")
+			--DialogStack.Replace("TeamPveDetails",{gid = fubenTable[gid][1],is_on = true,BtnDesc = fubenTable[gid][3]},"UGUIRootTop")
+		end
+	end})
+else
+    LoadStory(900000,function ()            
+    end,true)
+end
+SetStoryOptions(menus)
+LoadStoryOptions()

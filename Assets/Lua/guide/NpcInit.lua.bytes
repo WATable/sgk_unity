@@ -1,0 +1,225 @@
+﻿----------------通用脚本，用于加载其他脚本----------------------
+local mapid,gid = ...
+gid = tonumber(gid)
+
+local MapConfig = require "config.MapConfig"
+local npc_conf = MapConfig.GetMapMonsterConf(gid)
+local npc_id = npc_conf.mode
+local StoryConfig = require "config.StoryConfig"
+local MapHelper = require "utils.MapHelper"
+
+
+--组队活动
+local fubenTable = {
+    [2010006] = 101,
+    [6010981] = 101,
+    [2010008] = 102,
+    [6010982] = 102,
+    [2019001] = 103,
+    [6019981] = 103,
+    [2030011] = 104,
+    [6030981] = 104,
+    [2030010] = 105,
+    [6030982] = 105,
+    [2030003] = 106,
+    [6030983] = 106,
+    [2019004] = 107,
+    [6019982] = 107,
+    [2037002] = 108,
+    [6037983] = 108,
+    [2027000] = 109,
+    [6027981] = 109,
+    [2050000] = 110,
+    [6050982] = 110,
+    -- [2027004] = 111,
+    -- [6030982] = 111,
+    -- [2037003] = 112,
+    -- [6030982] = 112,
+    -- [2030006] = 113,
+    -- [6030982] = 113,
+    -- [2019002] = 114,
+    -- [6030982] = 114,
+    -- [2049000] = 115,
+    -- [6030982] = 115,
+    -- [2037000] = 116,
+    -- [6030982] = 116,
+    [2010011] = 117,
+    [2037000] = 21,--元素暴走
+    [2037003] = 22,--棱镜探险
+    [2010004] = 201,
+	[2010007] = 202,
+    [2030009] = 203,
+    [2037005] = 51,
+    [2038000] = 52,
+    --[2027000] = 53,
+    [2013000] = 54, 
+}
+
+for k,_ in pairs(fubenTable) do
+    if gid == k then
+        AssociatedLuaScript("guide/graveyardDay.lua",...)
+        break
+    end
+end
+
+--通用对白
+local npc_list = {
+    [2030005] = 1104233,
+    [2010017] = 999998,
+    [2019114] = 999997,
+    [2019115] = 999996,
+    [2010016] = 999995,
+    [6029980] = 999994,
+}
+
+    if npc_list[gid] then
+        LoadStory(npc_list[gid],function ()            
+            end,true)
+    else
+        AssociatedLuaScript("guide/NpcTalk.lua",...)
+    end
+
+--任务通用脚本
+AssociatedLuaScript("guide/Story.lua",...)
+--加载赠送按钮
+--获取某npc好感度数值utils.SGKTools.GetNPCBribeValue(real_npc_id)
+--打开某个NPC的赠送礼物界utils.SGKTools.GetNPCBribeView(npc_id)
+
+local real_npc_id = npc_conf.npc_id
+local npc_arguments_value = utils.SGKTools.GetNPCBribeValue(real_npc_id)
+
+if real_npc_id and real_npc_id ~= 0 then
+    local menus = {}
+    table.insert(menus, {name="赠送", auto = false, icon = "bg_db_duihuarenwu", action = function()
+        DispatchEvent("KEYDOWN_ESCAPE")
+        utils.SGKTools.OpenNPCBribeView(real_npc_id)
+    end})
+    SetStoryOptions(menus)
+end 
+
+--主线调用引导
+--[[ if gid == 2052111 then
+    local menus = {}
+    table.insert(menus, {name="石羽缎带的用法", effect = "effect/UI/fx_guide_kuan",auto = false, icon = "bg_db_duihuarenwu", action = function()
+        DispatchEvent("KEYDOWN_ESCAPE")
+        utils.MapHelper.ClearGuideCache(1410)
+        utils.MapHelper.PlayGuide(1401, 0.2)
+    end})
+    SetStoryOptions(menus)
+end ]]
+
+--剧情测试
+if gid == 2900993 then
+    local menus = {}
+    table.insert(menus, {name="测试剧情1", auto = false, action = function()
+        LoadStory(1010010101)
+        --utils.SGKTools.showScrollingMarquee("测试测试测试")
+    end})
+    table.insert(menus, {name="测试剧情2", auto = false, action = function()
+        LoadStory(10001)
+    end})
+    table.insert(menus, {name="测试剧情3", auto = false, action = function()
+        LoadStory(10105164)
+    end})
+    table.insert(menus, {name="生成npc", auto = false, action = function()
+        module.NPCModule.LoadNpcOBJ(2009104,nil,true)
+        --module.NPCModule.LoadNpcOBJ(2009002,Vector3(2.5,0,4),true)
+        --module.NPCModule.LoadNpcOBJ(2009100,Vector3(2.5,0,4),true)
+    end})
+    table.insert(menus, {name="移除测试npc", auto = false, action = function()
+        utils.SGKTools.loadEffect("longzi_hit",2009001)
+        Sleep(0.5)
+        module.NPCModule.deleteNPC(2009104)
+        module.NPCModule.deleteNPC(2009002)
+
+    end})
+
+    SetStoryOptions(menus)
+end
+
+--发放物品
+if gid == 2900990 then
+    AssociatedLuaScript("guide/Gift.lua",...)
+end
+
+--战斗测试
+if gid == 2900991 or gid == 8026000 or gid == 2900994 then
+    AssociatedLuaScript("guide/TestFight.lua",...)
+end
+
+--闲聊
+local NPCtable = {
+    [2019000] = 1100401,
+    [2019001] = 1100101,
+    [2019002] = 1102301,
+    [2030004] = 1105101,
+    [2030003] = 1105201,
+    [2030002] = 1106001,
+	[2010015] = 1904101,
+    [2030001] = 1106901,
+    [2030000] = 1107001,
+    [2030005] = 1104211,
+    [2030006] = 1106701,
+    [2030007] = 1106201,
+    [2030008] = 1105601,
+    [2010011] = 1107101,
+    [2010013] = 1107201,
+    [2010014] = 1107301,
+    [2013000] = 1100501,
+    [2013001] = 1100801,
+    [2013003] = 1100901,
+    [2027001] = 1105501,
+    [2037000] = 1101102,
+    [2037001] = 1100601,
+    [2037002] = 1100701,
+    [2037003] = 1101201,
+    [2037004] = 1101001,
+    [2038000] = 1104901,
+    [2028000] = 1990601,
+    [2023000] = 1105511,
+    [2030009] = 1902301,
+    [2030010] = 1101211,
+    [2030011] = 1102001,
+    [2010004] = 1905101,
+    [2010006] = 1100201,
+    [2010007] = 1103601,
+    [2010008] = 1100411,
+    [2010012] = 1101401,
+    [2027000] = 1102401,
+}
+
+--[[ if NPCtable[gid] then
+   AssociatedLuaScript("guide/NPC_speak.lua",...)      
+end ]]
+if real_npc_id and real_npc_id ~= 0 then
+    AssociatedLuaScript("guide/NPC_speak.lua",...) 
+end 
+
+--[[回忆录NPC
+local depend_quest = module.QuestModule.Get(102143)--回忆录NPC
+if gid == 2020000 and depend_quest and depend_quest.status == 1 then
+    local menus = {}
+    table.insert(menus, {name="回忆录", icon = "menu_bn_17", auto = false, action = function()
+        DispatchEvent("CloseStoryReset")
+        MapHelper.OpSelectMap()
+    end})
+    SetStoryOptions(menus) 
+end
+]]
+
+if gid == 2900993 then
+    local menus = {}
+    table.insert(menus, {name="放弃主线任务", icon = "menu_bn_17", auto = false, action = function()
+        local quest_id = module.QuestModule.GetList(10,0);
+        for _,v in pairs(quest_id) do
+            module.QuestModule.Cancel(v.uuid)
+        end
+    end})
+    table.insert(menus, {name="放弃称号任务", icon = "menu_bn_17", auto = false, action = function()
+        local quest_id = module.QuestModule.GetList(60,0);
+        for _,v in pairs(quest_id) do
+            module.QuestModule.Cancel(v.uuid)
+        end
+    end})
+    SetStoryOptions(menus) 
+end

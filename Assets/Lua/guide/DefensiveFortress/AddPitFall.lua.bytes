@@ -1,0 +1,18 @@
+local siteId = ...
+
+siteId=tonumber(siteId)
+local menus = {}
+table.insert(menus, 
+				{	
+					name = "强化陷阱",
+					icon = "bg_db_zhandourenwu", 
+					action = function()
+						DispatchEvent("CloseStoryReset");
+						DispatchEvent("CLICK_OPEN_ADDPANEL",{siteId=siteId});
+					end
+				}
+			)
+
+SetStoryOptions(menus)
+LoadStory(55101001,function ()            
+            end,true)

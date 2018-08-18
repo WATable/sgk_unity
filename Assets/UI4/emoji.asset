@@ -1,0 +1,437 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5efe682ead7eb154f97508822f9d073c, type: 3}
+  m_Name: emoji
+  m_EditorClassIdentifier: 
+  ID: 0
+  _IsStatic: 0
+  texSource: {fileID: 2800000, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+  listSpriteGroup:
+  - tag: 1
+    listSpriteInfor:
+    - ID: 1
+      name: 1
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 431
+        width: 80
+        height: 80
+      sprite: {fileID: 21300000, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 1
+      uv:
+      - {x: 0.001953125, y: 0.9980469}
+      - {x: 0.15820312, y: 0.9980469}
+      - {x: 0.15820312, y: 0.8417969}
+      - {x: 0.001953125, y: 0.8417969}
+    width: 1
+    size: 24
+  - tag: 2
+    listSpriteInfor:
+    - ID: 2
+      name: 2
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 349
+        width: 80
+        height: 80
+      sprite: {fileID: 21300002, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 2
+      uv:
+      - {x: 0.16210938, y: 0.8378906}
+      - {x: 0.31835938, y: 0.8378906}
+      - {x: 0.31835938, y: 0.6816406}
+      - {x: 0.16210938, y: 0.6816406}
+    width: 1
+    size: 24
+  - tag: 3
+    listSpriteInfor:
+    - ID: 3
+      name: 3
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 103
+        width: 80
+        height: 80
+      sprite: {fileID: 21300004, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 3
+      uv:
+      - {x: 0.16210938, y: 0.35742188}
+      - {x: 0.31835938, y: 0.35742188}
+      - {x: 0.31835938, y: 0.20117188}
+      - {x: 0.16210938, y: 0.20117188}
+    width: 1
+    size: 24
+  - tag: 4
+    listSpriteInfor:
+    - ID: 4
+      name: 4
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 21
+        width: 80
+        height: 80
+      sprite: {fileID: 21300006, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 4
+      uv:
+      - {x: 0.16210938, y: 0.19726562}
+      - {x: 0.31835938, y: 0.19726562}
+      - {x: 0.31835938, y: 0.041015625}
+      - {x: 0.16210938, y: 0.041015625}
+    width: 1
+    size: 24
+  - tag: 5
+    listSpriteInfor:
+    - ID: 5
+      name: 5
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 349
+        width: 80
+        height: 80
+      sprite: {fileID: 21300008, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 5
+      uv:
+      - {x: 0.32226562, y: 0.8378906}
+      - {x: 0.47851562, y: 0.8378906}
+      - {x: 0.47851562, y: 0.6816406}
+      - {x: 0.32226562, y: 0.6816406}
+    width: 1
+    size: 24
+  - tag: 6
+    listSpriteInfor:
+    - ID: 6
+      name: 6
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 349
+        width: 80
+        height: 80
+      sprite: {fileID: 21300010, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 6
+      uv:
+      - {x: 0.48242188, y: 0.8378906}
+      - {x: 0.6386719, y: 0.8378906}
+      - {x: 0.6386719, y: 0.6816406}
+      - {x: 0.48242188, y: 0.6816406}
+    width: 1
+    size: 24
+  - tag: 7
+    listSpriteInfor:
+    - ID: 7
+      name: 7
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 349
+        width: 80
+        height: 80
+      sprite: {fileID: 21300012, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 7
+      uv:
+      - {x: 0.6425781, y: 0.8378906}
+      - {x: 0.7988281, y: 0.8378906}
+      - {x: 0.7988281, y: 0.6816406}
+      - {x: 0.6425781, y: 0.6816406}
+    width: 1
+    size: 24
+  - tag: 8
+    listSpriteInfor:
+    - ID: 8
+      name: 8
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 349
+        width: 80
+        height: 80
+      sprite: {fileID: 21300014, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 8
+      uv:
+      - {x: 0.8027344, y: 0.8378906}
+      - {x: 0.9589844, y: 0.8378906}
+      - {x: 0.9589844, y: 0.6816406}
+      - {x: 0.8027344, y: 0.6816406}
+    width: 1
+    size: 24
+  - tag: 9
+    listSpriteInfor:
+    - ID: 9
+      name: 9
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 267
+        width: 80
+        height: 80
+      sprite: {fileID: 21300016, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 9
+      uv:
+      - {x: 0.32226562, y: 0.6777344}
+      - {x: 0.47851562, y: 0.6777344}
+      - {x: 0.47851562, y: 0.5214844}
+      - {x: 0.32226562, y: 0.5214844}
+    width: 1
+    size: 24
+  - tag: 10
+    listSpriteInfor:
+    - ID: 10
+      name: 10
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 349
+        width: 80
+        height: 80
+      sprite: {fileID: 21300018, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 10
+      uv:
+      - {x: 0.001953125, y: 0.8378906}
+      - {x: 0.15820312, y: 0.8378906}
+      - {x: 0.15820312, y: 0.6816406}
+      - {x: 0.001953125, y: 0.6816406}
+    width: 1
+    size: 24
+  - tag: 11
+    listSpriteInfor:
+    - ID: 11
+      name: 11
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 267
+        width: 80
+        height: 80
+      sprite: {fileID: 21300020, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 11
+      uv:
+      - {x: 0.001953125, y: 0.6777344}
+      - {x: 0.15820312, y: 0.6777344}
+      - {x: 0.15820312, y: 0.5214844}
+      - {x: 0.001953125, y: 0.5214844}
+    width: 1
+    size: 24
+  - tag: 12
+    listSpriteInfor:
+    - ID: 12
+      name: 12
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 185
+        width: 80
+        height: 80
+      sprite: {fileID: 21300022, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 12
+      uv:
+      - {x: 0.001953125, y: 0.5175781}
+      - {x: 0.15820312, y: 0.5175781}
+      - {x: 0.15820312, y: 0.36132812}
+      - {x: 0.001953125, y: 0.36132812}
+    width: 1
+    size: 24
+  - tag: 13
+    listSpriteInfor:
+    - ID: 13
+      name: 13
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 103
+        width: 80
+        height: 80
+      sprite: {fileID: 21300024, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 13
+      uv:
+      - {x: 0.001953125, y: 0.35742188}
+      - {x: 0.15820312, y: 0.35742188}
+      - {x: 0.15820312, y: 0.20117188}
+      - {x: 0.001953125, y: 0.20117188}
+    width: 1
+    size: 24
+  - tag: 14
+    listSpriteInfor:
+    - ID: 14
+      name: 14
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 21
+        width: 80
+        height: 80
+      sprite: {fileID: 21300026, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 14
+      uv:
+      - {x: 0.001953125, y: 0.19726562}
+      - {x: 0.15820312, y: 0.19726562}
+      - {x: 0.15820312, y: 0.041015625}
+      - {x: 0.001953125, y: 0.041015625}
+    width: 1
+    size: 24
+  - tag: 15
+    listSpriteInfor:
+    - ID: 15
+      name: 15
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 431
+        width: 80
+        height: 80
+      sprite: {fileID: 21300028, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 15
+      uv:
+      - {x: 0.16210938, y: 0.9980469}
+      - {x: 0.31835938, y: 0.9980469}
+      - {x: 0.31835938, y: 0.8417969}
+      - {x: 0.16210938, y: 0.8417969}
+    width: 1
+    size: 24
+  - tag: 16
+    listSpriteInfor:
+    - ID: 16
+      name: 16
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 431
+        width: 80
+        height: 80
+      sprite: {fileID: 21300030, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 16
+      uv:
+      - {x: 0.32226562, y: 0.9980469}
+      - {x: 0.47851562, y: 0.9980469}
+      - {x: 0.47851562, y: 0.8417969}
+      - {x: 0.32226562, y: 0.8417969}
+    width: 1
+    size: 24
+  - tag: 17
+    listSpriteInfor:
+    - ID: 17
+      name: 17
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 431
+        width: 80
+        height: 80
+      sprite: {fileID: 21300032, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 17
+      uv:
+      - {x: 0.48242188, y: 0.9980469}
+      - {x: 0.6386719, y: 0.9980469}
+      - {x: 0.6386719, y: 0.8417969}
+      - {x: 0.48242188, y: 0.8417969}
+    width: 1
+    size: 24
+  - tag: 18
+    listSpriteInfor:
+    - ID: 18
+      name: 18
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 431
+        width: 80
+        height: 80
+      sprite: {fileID: 21300034, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 18
+      uv:
+      - {x: 0.6425781, y: 0.9980469}
+      - {x: 0.7988281, y: 0.9980469}
+      - {x: 0.7988281, y: 0.8417969}
+      - {x: 0.6425781, y: 0.8417969}
+    width: 1
+    size: 24
+  - tag: 19
+    listSpriteInfor:
+    - ID: 19
+      name: 19
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 431
+        width: 80
+        height: 80
+      sprite: {fileID: 21300036, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 19
+      uv:
+      - {x: 0.8027344, y: 0.9980469}
+      - {x: 0.9589844, y: 0.9980469}
+      - {x: 0.9589844, y: 0.8417969}
+      - {x: 0.8027344, y: 0.8417969}
+    width: 1
+    size: 24
+  - tag: 20
+    listSpriteInfor:
+    - ID: 20
+      name: 20
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 267
+        width: 80
+        height: 80
+      sprite: {fileID: 21300038, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 20
+      uv:
+      - {x: 0.16210938, y: 0.6777344}
+      - {x: 0.31835938, y: 0.6777344}
+      - {x: 0.31835938, y: 0.5214844}
+      - {x: 0.16210938, y: 0.5214844}
+    width: 1
+    size: 24
+  - tag: 21
+    listSpriteInfor:
+    - ID: 21
+      name: 21
+      pivot: {x: 40, y: 40}
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 185
+        width: 80
+        height: 80
+      sprite: {fileID: 21300040, guid: a72b657b433e7074d962f5df11d72860, type: 3}
+      tag: 21
+      uv:
+      - {x: 0.16210938, y: 0.5175781}
+      - {x: 0.31835938, y: 0.5175781}
+      - {x: 0.31835938, y: 0.36132812}
+      - {x: 0.16210938, y: 0.36132812}
+    width: 1
+    size: 24

@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: chenggongguoguan_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 60ac45050e3f39c46a73ccd9982228f5, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 144c1beff0f106641887d66bfd7c73a3, type: 2}
+  atlas:
+    pages:
+    - name: chenggongguoguan.png
+      format: 6
+      minFilter: 1
+      magFilter: 1
+      uWrap: 1
+      vWrap: 1
+      rendererObject: {fileID: 2100000, guid: 144c1beff0f106641887d66bfd7c73a3, type: 2}
+      width: 1024
+      height: 512
+    regions:
+    - pageIndex: 0
+      name: 2
+      x: 482
+      y: 347
+      width: 359
+      height: 136
+      u: 0.47070312
+      v: 0.32226562
+      u2: 0.82128906
+      v2: 0.056640625
+      offsetX: 0
+      offsetY: 1
+      originalWidth: 359
+      originalHeight: 138
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 4
+      x: 2
+      y: 2
+      width: 267
+      height: 256
+      u: 0.001953125
+      v: 0.99609375
+      u2: 0.2626953
+      v2: 0.49609375
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 267
+      originalHeight: 256
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 5
+      x: 2
+      y: 260
+      width: 478
+      height: 223
+      u: 0.001953125
+      v: 0.4921875
+      u2: 0.46875
+      v2: 0.056640625
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 480
+      originalHeight: 225
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 6
+      x: 271
+      y: 168
+      width: 155
+      height: 90
+      u: 0.26464844
+      v: 0.671875
+      u2: 0.41601562
+      v2: 0.49609375
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 157
+      originalHeight: 92
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: "\u7EC4 7"
+      x: 482
+      y: 263
+      width: 388
+      height: 82
+      u: 0.47070312
+      v: 0.48632812
+      u2: 0.8496094
+      v2: 0.32617188
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 388
+      originalHeight: 82
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    Loaded: 1

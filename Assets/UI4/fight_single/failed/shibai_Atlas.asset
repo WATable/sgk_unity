@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: shibai_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: c02caf6940cc04b4893d66b2a39d1430, type: 3}
+  materials:
+  - {fileID: 2100000, guid: d1d534fafae768c488348f2bd2f8c4da, type: 2}
+  atlas:
+    pages:
+    - name: shibai.png
+      format: 6
+      minFilter: 1
+      magFilter: 1
+      uWrap: 1
+      vWrap: 1
+      rendererObject: {fileID: 2100000, guid: d1d534fafae768c488348f2bd2f8c4da, type: 2}
+      width: 1024
+      height: 512
+    regions:
+    - pageIndex: 0
+      name: 1
+      x: 2
+      y: 2
+      width: 79
+      height: 16
+      u: 0.001953125
+      v: 0.99609375
+      u2: 0.07910156
+      v2: 0.96484375
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 79
+      originalHeight: 16
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 14
+      x: 479
+      y: 162
+      width: 153
+      height: 90
+      u: 0.46777344
+      v: 0.68359375
+      u2: 0.6171875
+      v2: 0.5078125
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 155
+      originalHeight: 92
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 15
+      x: 482
+      y: 254
+      width: 240
+      height: 27
+      u: 0.47070312
+      v: 0.50390625
+      u2: 0.7050781
+      v2: 0.45117188
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 240
+      originalHeight: 27
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 16
+      x: 482
+      y: 283
+      width: 388
+      height: 54
+      u: 0.47070312
+      v: 0.44726562
+      u2: 0.8496094
+      v2: 0.34179688
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 388
+      originalHeight: 54
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 17
+      x: 2
+      y: 20
+      width: 267
+      height: 256
+      u: 0.001953125
+      v: 0.9609375
+      u2: 0.2626953
+      v2: 0.4609375
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 267
+      originalHeight: 256
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 18
+      x: 2
+      y: 278
+      width: 478
+      height: 223
+      u: 0.001953125
+      v: 0.45703125
+      u2: 0.46875
+      v2: 0.021484375
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 480
+      originalHeight: 225
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2
+      x: 271
+      y: 124
+      width: 206
+      height: 152
+      u: 0.26464844
+      v: 0.7578125
+      u2: 0.4658203
+      v2: 0.4609375
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 206
+      originalHeight: 152
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 3
+      x: 482
+      y: 339
+      width: 339
+      height: 162
+      u: 0.47070312
+      v: 0.33789062
+      u2: 0.8017578
+      v2: 0.021484375
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 341
+      originalHeight: 164
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 4
+      x: 271
+      y: 34
+      width: 165
+      height: 88
+      u: 0.26464844
+      v: 0.93359375
+      u2: 0.42578125
+      v2: 0.76171875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 165
+      originalHeight: 88
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 5
+      x: 823
+      y: 376
+      width: 140
+      height: 125
+      u: 0.80371094
+      v: 0.265625
+      u2: 0.9404297
+      v2: 0.021484375
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 140
+      originalHeight: 125
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    Loaded: 1

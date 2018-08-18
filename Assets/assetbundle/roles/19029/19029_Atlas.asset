@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: 19029_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: e77c397ffe7b5704997614da48cf736b, type: 3}
+  materials:
+  - {fileID: 2100000, guid: c426bcb882a61e04b95f76e32ff27c76, type: 2}
+  atlas:
+    pages:
+    - name: 19029.png
+      format: 6
+      minFilter: 1
+      magFilter: 1
+      uWrap: 1
+      vWrap: 1
+      rendererObject: {fileID: 2100000, guid: c426bcb882a61e04b95f76e32ff27c76, type: 2}
+      width: 2048
+      height: 256
+    regions:
+    - pageIndex: 0
+      name: kuzi
+      x: 1414
+      y: 141
+      width: 189
+      height: 113
+      u: 0.6904297
+      v: 0.44921875
+      u2: 0.78271484
+      v2: 0.0078125
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 190
+      originalHeight: 114
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: lingdai
+      x: 935
+      y: 37
+      width: 129
+      height: 51
+      u: 0.45654297
+      v: 0.85546875
+      u2: 0.4814453
+      v2: 0.3515625
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 129
+      originalHeight: 52
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: tou
+      x: 2
+      y: 2
+      width: 251
+      height: 252
+      u: 0.0009765625
+      v: 0.9921875
+      u2: 0.123535156
+      v2: 0.0078125
+      offsetX: 1
+      offsetY: 1
+      originalWidth: 252
+      originalHeight: 254
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: xuxu
+      x: 1605
+      y: 163
+      width: 54
+      height: 91
+      u: 0.7836914
+      v: 0.36328125
+      u2: 0.8100586
+      v2: 0.0078125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 54
+      originalHeight: 91
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: yifu
+      x: 1221
+      y: 89
+      width: 165
+      height: 191
+      u: 0.5961914
+      v: 0.65234375
+      u2: 0.6894531
+      v2: 0.0078125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 165
+      originalHeight: 191
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: yiling
+      x: 704
+      y: 21
+      width: 229
+      height: 145
+      u: 0.34375
+      v: 0.91796875
+      u2: 0.4555664
+      v2: 0.3515625
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 230
+      originalHeight: 145
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: youjiao
+      x: 255
+      y: 8
+      width: 222
+      height: 246
+      u: 0.12451172
+      v: 0.96875
+      u2: 0.23291016
+      v2: 0.0078125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 222
+      originalHeight: 246
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: youshou
+      x: 704
+      y: 168
+      width: 289
+      height: 86
+      u: 0.34375
+      v: 0.34375
+      u2: 0.48486328
+      v2: 0.0078125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 289
+      originalHeight: 86
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: zuojiao
+      x: 479
+      y: 48
+      width: 223
+      height: 206
+      u: 0.23388672
+      v: 0.8125
+      u2: 0.34277344
+      v2: 0.0078125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 223
+      originalHeight: 206
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: zuoshou
+      x: 995
+      y: 136
+      width: 224
+      height: 118
+      u: 0.48583984
+      v: 0.46875
+      u2: 0.59521484
+      v2: 0.0078125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 225
+      originalHeight: 118
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    Loaded: 1

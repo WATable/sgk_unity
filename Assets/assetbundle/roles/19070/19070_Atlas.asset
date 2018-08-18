@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: 19070_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: adaa305666de4194bb9589b742ab1857, type: 3}
+  materials:
+  - {fileID: 2100000, guid: ed1c942c41d663d4e994eece08d4a5f1, type: 2}
+  atlas:
+    pages:
+    - name: 19070.png
+      format: 6
+      minFilter: 1
+      magFilter: 1
+      uWrap: 1
+      vWrap: 1
+      rendererObject: {fileID: 2100000, guid: ed1c942c41d663d4e994eece08d4a5f1, type: 2}
+      width: 512
+      height: 128
+    regions:
+    - pageIndex: 0
+      name: 1
+      x: 275
+      y: 104
+      width: 68
+      height: 18
+      u: 0.5371094
+      v: 0.1875
+      u2: 0.6699219
+      v2: 0.046875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 68
+      originalHeight: 18
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 2
+      x: 143
+      y: 6
+      width: 130
+      height: 116
+      u: 0.27929688
+      v: 0.953125
+      u2: 0.5332031
+      v2: 0.046875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 130
+      originalHeight: 119
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: 3
+      x: 2
+      y: 7
+      width: 139
+      height: 115
+      u: 0.00390625
+      v: 0.9453125
+      u2: 0.27539062
+      v2: 0.046875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 141
+      originalHeight: 115
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: xingxing
+      x: 275
+      y: 94
+      width: 8
+      height: 8
+      u: 0.5371094
+      v: 0.265625
+      u2: 0.5527344
+      v2: 0.203125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 8
+      originalHeight: 8
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: xingzhuang
+      x: 2
+      y: 2
+      width: 3
+      height: 10
+      u: 0.00390625
+      v: 0.984375
+      u2: 0.0234375
+      v2: 0.9609375
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 3
+      originalHeight: 10
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    Loaded: 1

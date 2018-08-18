@@ -1,0 +1,183 @@
+return {
+	type = "Layer",
+	pos = {0, 0},
+	children = {
+		{
+			type = "Sprite",
+			texture = "30099/1.png",
+			pos = {0, 0, "cc"},
+			zOrder = -1,
+		},
+		{
+			type = "Button",
+	        name = "btnBack",
+	        texture = {"common/gui_common_bn_fanhui_01.png","common/gui_common_bn_fanhui_02.png"},
+			pos = {-415, -130, "ct"},
+		},
+		{	-- title
+			type = "Node",
+			name = "title",
+			pos = {0, -140, "ct"},
+			zOrder = 1,
+			children = {
+				{
+					type = "Sprite",
+					texture = "fomation/gui_common_bg_title_zhenrong_01.png",
+					pos = {0, 0};
+				},
+				{
+					type = "Label",
+					font = {"fonts/default.ttf", 30, 3},
+					text = "@str/guild/pvp/title_signup",
+					pos = {0, 20},
+					color = {250,200,113,255},
+				},
+				{
+					type = "Label",
+					name = "startTime",
+					font = {"fonts/hei.ttf", 18, 2},
+					pos = {0, -25},
+					color = {156,248,57,255},
+				},
+				{
+					type = "Button",
+					name = "btnGonglue",
+					texture = "mainscene/gui_common_bn_main_17.png",
+					pos = {420, 5},
+				},
+				{
+					type = "Label",
+					font = {"fonts/default.ttf", 24, 3},
+					text = "@str/tips",
+					pos = {420, -20},
+					color = {250,200,113,255},
+				},
+				{
+					type = "Button",
+					name = "btnSetting",
+					texture = "juntuan/pvp/gui_common_bn_juntuan_pvp_renming.png",
+					pos = {300, 10},
+					zOrder = 1,
+				},
+				{
+					type = "Label",
+					font = {"fonts/default.ttf", 24, 3},
+					text = "@str/appointment",
+					pos = {300, -20},
+					color = {250,200,113,255},
+					zOrder = 1,
+				},
+			},
+		},
+		{
+			type = "Node",
+			name = "content",
+			contentSize = {919,497},
+			anchorPoint = {0.5, 0.5},
+			pos = {0, -45, "cc"},
+			children = {
+				{
+					type = "Sprite",
+					texture = "juntuan/pvp/gui_common_bg_juntuan_pvp_01.jpg",
+					pos = {0, 0, "cc"},
+				},
+				{
+					type  = "Label",
+					font  = {"fonts/default.ttf", 24, 3},
+					anchorPoint = {0.0, 0.5},
+					text  = "@str/guild/pvp/guild_list",
+					pos   = {-350, 195, "cc"},
+					color = {250,200,113,255},
+				},
+				{
+					type  = "Label",
+					font  = {"fonts/hei.ttf", 18, 2},
+					anchorPoint = {0.0, 0.5},
+					text  = "@str/guild/exp",
+					pos   = {-20, 195, "cc"},
+					color = {255,255,255,255},
+				},
+				{
+					type = "Scale9Sprite",
+					contentSize = {460,385},
+					texture = "juntuan/pvp/gui_common_bg_juntuan_pvp_03.png",
+					pos = {-130, -20, "cc"},
+				},
+				{
+					type  = "Label",
+					font  = {"fonts/default.ttf", 24, 3},
+					anchorPoint = {0.0, 0.5},
+					text  = "@str/guild/pvp/signup_cond_title",
+					pos   = {125, 195, "cc"},
+					color = {250,200,113,255},
+				},
+				{
+					type = "Scale9Sprite",
+					contentSize = {260,385},
+					texture = "juntuan/pvp/gui_common_bg_juntuan_pvp_03.png",
+					pos = {250, -20, "cc"},
+				},
+				{
+					type  = "Label",
+					name  = "signupCondition",
+					font  = {"fonts/hei.ttf", 24},
+					anchorPoint = {0.0, 1.0},
+					maxLineWidth = 240;
+					-- text  = "@str/guild/pvp/signup_cond_info",
+					pos   = {130, 155, "cc"},
+					color = {0, 0, 0, 255},
+				},
+				{
+					type = "TableView",
+					name = "listTableView",
+					contentSize = {445, 370},
+					pos = {-340, -205, "cc"},
+				},
+				{
+					type = "Sprite",
+					name = "costIcon",
+					texture = "icon/902.png",
+					pos = {200, 20, "cc"},
+				},
+				{
+					type = "Label",
+					name = "costValue",
+					text = "100000",
+					font = {"fonts/hei.ttf", 24},
+					anchorPoint = {0.0, 0.5},
+					color = {0,0,0,255},
+					pos = {220, 20, "cc"},
+				},
+				{
+					type = "Button",
+					title = "@str/guild/pvp/signup",
+					name = "btnSignup",
+					texture = {"common/gui_common_bn_dahong_01.png", "common/gui_common_bn_dahong_02.png"},
+					pos = {250, -30, "cc"},
+				},
+				{
+					type = "Label",
+					name = "labelSignupAlready",
+					text = "@str/guild/pvp/joined",
+					font = {"fonts/default.ttf", 28, 3},
+					color = {156,248,57,255},
+					pos = {250, -30, "cc"},
+				},
+				{
+					type = "Button",
+					title = "@str/guild/pvp/view_order",
+					name = "btnOrder",
+					texture = {"common/gui_common_bn_dalan_01.png", "common/gui_common_bn_dalan_02.png"},
+					pos = {250, -100, "cc"},
+				},
+				{
+					type = "Button",
+					title = "@str/guild/pvp/view_report",
+					name = "btnReport",
+					texture = {"common/gui_common_bn_dahe_01.png", "common/gui_common_bn_dahe_02.png"},
+					pos = {250, -170, "cc"},
+				},
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: hero1_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 185412f22f2fadc4f96730b2cc9b6749, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 3a9fae973339be84ea40ca9051c89608, type: 2}
+  atlas:
+    pages:
+    - name: hero1.png
+      format: 6
+      minFilter: 1
+      magFilter: 1
+      uWrap: 1
+      vWrap: 1
+      rendererObject: {fileID: 2100000, guid: 3a9fae973339be84ea40ca9051c89608, type: 2}
+      width: 1024
+      height: 1024
+    regions:
+    - pageIndex: 0
+      name: xingguang
+      x: 2
+      y: 2
+      width: 581
+      height: 723
+      u: 0.001953125
+      v: 0.9980469
+      u2: 0.56933594
+      v2: 0.2919922
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 581
+      originalHeight: 723
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    Loaded: 1

@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: cg_comic1_2_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 79d145a0e09e3d641a82dff25e0310d3, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 467e6ef81dff53e46a4c2777d5103054, type: 2}
+  atlas:
+    pages:
+    - name: cg_comic1_2.png
+      format: 6
+      minFilter: 1
+      magFilter: 1
+      uWrap: 1
+      vWrap: 1
+      rendererObject: {fileID: 2100000, guid: 467e6ef81dff53e46a4c2777d5103054, type: 2}
+      width: 2048
+      height: 1024
+    regions:
+    - pageIndex: 0
+      name: images/bg
+      x: 2
+      y: 32
+      width: 192
+      height: 334
+      u: 0.0009765625
+      v: 0.96875
+      u2: 0.1640625
+      v2: 0.78125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 192
+      originalHeight: 334
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: images/fenjing3
+      x: 2
+      y: 593
+      width: 820
+      height: 428
+      u: 0.0009765625
+      v: 0.42089844
+      u2: 0.4013672
+      v2: 0.0029296875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 820
+      originalHeight: 428
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: images/fenjing4
+      x: 824
+      y: 525
+      width: 816
+      height: 284
+      u: 0.40234375
+      v: 0.4873047
+      u2: 0.80078125
+      v2: 0.20996094
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 816
+      originalHeight: 284
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: images/fenjing4-2
+      x: 754
+      y: 239
+      width: 816
+      height: 284
+      u: 0.36816406
+      v: 0.76660156
+      u2: 0.76660156
+      v2: 0.4892578
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 816
+      originalHeight: 284
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: images/manhua0
+      x: 824
+      y: 811
+      width: 1000
+      height: 210
+      u: 0.40234375
+      v: 0.20800781
+      u2: 0.890625
+      v2: 0.0029296875
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 1000
+      originalHeight: 210
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: images/manhua1
+      x: 2
+      y: 226
+      width: 750
+      height: 365
+      u: 0.0009765625
+      v: 0.7792969
+      u2: 0.3671875
+      v2: 0.42285156
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 750
+      originalHeight: 365
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: images/manhua2
+      x: 1642
+      y: 371
+      width: 438
+      height: 365
+      u: 0.8017578
+      v: 0.6376953
+      u2: 0.97998047
+      v2: 0.20996094
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 438
+      originalHeight: 365
+      index: -1
+      rotate: 1
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: images/word_0001
+      x: 2
+      y: 2
+      width: 85
+      height: 28
+      u: 0.0009765625
+      v: 0.9980469
+      u2: 0.04248047
+      v2: 0.9707031
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 85
+      originalHeight: 28
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: images/word_00023
+      x: 1826
+      y: 927
+      width: 119
+      height: 94
+      u: 0.89160156
+      v: 0.09472656
+      u2: 0.94970703
+      v2: 0.0029296875
+      offsetX: 1
+      offsetY: 0
+      originalWidth: 120
+      originalHeight: 94
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    - pageIndex: 0
+      name: images/word_0003
+      x: 338
+      y: 127
+      width: 189
+      height: 97
+      u: 0.16503906
+      v: 0.87597656
+      u2: 0.25732422
+      v2: 0.78125
+      offsetX: 0
+      offsetY: 0
+      originalWidth: 189
+      originalHeight: 97
+      index: -1
+      rotate: 0
+      splits: 
+      pads: 
+    Loaded: 1

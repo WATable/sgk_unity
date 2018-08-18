@@ -1,0 +1,130 @@
+local uuid,gid = ...
+gid = tonumber(gid)
+local mazeModule = require "module.mazeModule"
+
+local function callback1(err)
+    if err == 101 then 
+        showDlgError(nil,"已获得该角色的馈赠") 
+    elseif
+        err == 102 then
+        showDlgError(nil,"数据不再配置表中")
+    elseif
+        err == 103 then
+        showDlgError(nil,"该角色正在战斗中")
+    elseif
+        err == 104 then
+        showDlgError(nil,"击杀6位元素统领后才能与西风开战")
+    elseif
+        err == 105 then
+        showDlgError(nil,"服务器无该选项")
+    elseif
+        err == 106 then
+        showDlgError(nil,"有队员正在战斗中，请稍侯")
+    end
+end
+
+local FightList = {
+    [1601200] = {[1] = 
+                    {battleid = 50000001,desc ="神陵世界构成的基础元素之一，受水元素领主统辖，存活时也会加强其他友军战斗力", title = "水元素"},
+                [2] = 
+                    {battleid = 50000002,desc ="神陵世界构成的基础元素之一，受水元素领主死亡的影响而变弱，存活时也会加强其他友军战斗力", title = "惊慌的水元素"},
+                    },
+    [1601201] = {[1] = 
+                    {battleid = 50000004,desc ="神陵世界构成的基础元素之一，受风元素领主统辖，存活时也会加强其他友军战斗力", title = "风元素"},
+                [2] = 
+                    {battleid = 50000005,desc ="神陵世界构成的基础元素之一，受风元素领主死亡的影响而变弱，存活时也会加强其他友军战斗力", title = "惊慌的风元素"},
+                    },
+    [1601202] = {[1] = 
+                    {battleid = 50000007,desc ="神陵世界构成的基础元素之一，受火元素领主统辖，存活时也会加强其他友军战斗力", title = "火元素"},
+                [2] = 
+                    {battleid = 50000008,desc ="神陵世界构成的基础元素之一，受火元素领主死亡的影响而变弱，存活时也会加强其他友军战斗力", title = "惊慌的火元素"},
+                    },
+    [1601203] = {[1] = 
+                    {battleid = 50000010,desc ="神陵世界构成的基础元素之一，受土元素领主统辖，存活时也会加强其他友军战斗力", title = "土元素"},
+                [2] = 
+                    {battleid = 50000011,desc ="神陵世界构成的基础元素之一，受土元素领主死亡的影响而变弱，存活时也会加强其他友军战斗力", title = "惊慌的土元素"},
+                    },
+    [1601204] = {[1] = 
+                    {battleid = 50000013,desc ="神陵世界构成的基础元素之一，受光元素领主统辖，存活时也会加强其他友军战斗力", title = "光元素"},
+                [2] = 
+                    {battleid = 50000014,desc ="神陵世界构成的基础元素之一，受光元素领主死亡的影响而变弱，存活时也会加强其他友军战斗力", title = "惊慌的光元素"},
+                    },
+    [1601205] = {[1] = 
+                    {battleid = 50000016,desc ="神陵世界构成的基础元素之一，受暗元素领主统辖，存活时也会加强其他友军战斗力", title = "暗元素"},
+                [2] = 
+                    {battleid = 50000017,desc ="神陵世界构成的基础元素之一，受暗元素领主死亡的影响而变弱，存活时也会加强其他友军战斗力", title = "惊慌的暗元素"},
+                    },
+    [1601106] = {[1] = 
+                    {battleid = 50000019,desc ="被棱镜女王力量侵蚀的西风，战胜她可从棱镜中逃离出去，只有队长才能开启战斗", title = "棱镜西风",flag = "必须战胜6位元素领主才能挑战西风"},
+                    },
+    [1601100] = {[1] = 
+                    {battleid = 50000003,desc ="神陵世界构成的基础元素之一，统御水元素，棱镜西风的六大元素统领之一", title = "水元素领主"},
+                    },
+    [1601101] = {[1] = 
+                    {battleid = 50000006,desc ="神陵世界构成的基础元素之一，统御风元素，棱镜西风的六大元素统领之一", title = "风元素领主"},
+                    },
+    [1601102] = {[1] = 
+                    {battleid = 50000009,desc ="神陵世界构成的基础元素之一，统御火元素，棱镜西风的六大元素统领之一", title = "火元素领主"},
+                    },
+    [1601103] = {[1] = 
+                    {battleid = 50000012,desc ="神陵世界构成的基础元素之一，统御土元素，棱镜西风的六大元素统领之一", title = "土元素领主"},
+                    },
+    [1601104] = {[1] = 
+                    {battleid = 50000015,desc ="神陵世界构成的基础元素之一，统御光元素，棱镜西风的六大元素统领之一", title = "光元素领主"},
+                    },
+    [1601105] = {[1] = 
+                    {battleid = 50000018,desc ="神陵世界构成的基础元素之一，统御暗元素，棱镜西风的六大元素统领之一", title = "暗元素领主"},
+                    },
+}
+
+local function TryFight(gid)
+    if  gid == 1601106 then
+        if module.TeamModule.GetTeamInfo().leader.pid ~= module.playerModule.GetSelfID() then
+            showDlg(nil,"您不是队长，无法开启战斗")
+        else
+            if FightList[gid] then
+                --准备确认
+                --TeamModule.NewReadyToFight(FightList[gid])
+                DialogStack.PushPrefStact("mazeBattle",{data = FightList[gid][1],callback = function() 
+                        if  module.mazeModule.GetNpcIsKill(1601100) == 1 and
+                            module.mazeModule.GetNpcIsKill(1601101) == 1 and
+                            module.mazeModule.GetNpcIsKill(1601102) == 1 and
+                            module.mazeModule.GetNpcIsKill(1601103) == 1 and
+                            module.mazeModule.GetNpcIsKill(1601104) == 1 and
+                            module.mazeModule.GetNpcIsKill(1601105) == 1 then
+                                module.TeamModule.NewReadyToFight(1,function ( error)
+                                    if error == 0 then
+                                        module.mazeModule.Interact(uuid,1, {callback = callback1}) 
+                                    end
+                                end)
+                        else
+                            showDlgError(nil,"请先击败所有元素领主")
+                        end
+                    end 
+                    });
+                --module.fightModule.StartFight(FightList[gid])
+            else
+                showDlg(nil,"没有发现战斗id")
+            end
+        end
+    else
+        if  gid % 1000 < 300  then
+            local lord_id = gid - 100
+            local lord_dead = module.mazeModule.GetNpcIsKill(lord_id)
+            --local fight = FightList[gid][1][battleid] + 1
+            --if    iskill(lord) then
+                --DialogStack.PushPrefStact("mazeBattle",{FightList[gid][2],callback = function() module.mazeModule.Interact(uuid,1, callback1) end });
+            --end
+        --else
+            if lord_dead ~= 1 then   
+                DialogStack.PushPrefStact("mazeBattle",{data = FightList[gid][1],callback = function() 
+                    module.mazeModule.Interact(uuid,1, {callback = callback1}) end });
+            else
+                DialogStack.PushPrefStact("mazeBattle",{data = FightList[gid][2],callback = function() 
+                    module.mazeModule.Interact(uuid,1, {callback = callback1}) end });
+            end
+        end
+    end
+end
+
+TryFight(gid)
